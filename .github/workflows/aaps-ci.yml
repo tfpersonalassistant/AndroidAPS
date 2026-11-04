@@ -66,6 +66,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Decode Secrets Keystore Set and Oauth2 to Env
+        continue-on-error: true
         env:
           # Secrets arrive as environment variables. They must not be pasted into
           # the script text, because bash then parses them as source: any $,
